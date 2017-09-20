@@ -36,8 +36,8 @@ type Props = {
     b: ?NavigationTransitionProps,
   ) => NavigationTransitionSpec,
   navigationState: NavigationState,
-  onTransitionEnd: () => void,
-  onTransitionStart: () => void,
+  onTransitionEnd: (props: NavigationTransitionProps, prevProps: ?NavigationTransitionProps) => void,
+  onTransitionStart: (props: NavigationTransitionProps, prevProps: ?NavigationTransitionProps) => void,
   render: (a: NavigationTransitionProps, b: ?NavigationTransitionProps) => any,
   style: any,
 };
